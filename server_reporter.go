@@ -31,7 +31,7 @@ func newServerReporter(m *ServerMetrics, rpcType grpcType, fullMethod string) *s
 }
 
 func (r *serverReporter) ReceivedMessage() {
-	r.metrics.serverStreamMsgReceived.WithLabelValues(string(r.rpcType), r.serviceName, r.methodName).Inc()
+	//r.metrics.serverStreamMsgReceived.WithLabelValues(string(r.rpcType), r.serviceName, r.methodName).Inc()
 }
 
 func (r *serverReporter) SentMessage() {
